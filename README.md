@@ -25,6 +25,20 @@ This project was created as a learning exercise to explore **Spring Boot** and h
 - Maven installed
 - IDE (IntelliJ, Eclipse, VSCode)
 
+### Database Configuration (Dev Profile)
+
+This project uses PostgreSQL as the database. You need to define the database connection properties before being able to run the application.
+Create a file ``src/main/resources/application.properties`` (or edit it if it exists):
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/mydb
+   spring.datasource.username=your_db_username
+   spring.datasource.password=your_db_password
+
+   spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+   spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+   ```
+
 ### Run the Application
 
 1. Clone the repository:

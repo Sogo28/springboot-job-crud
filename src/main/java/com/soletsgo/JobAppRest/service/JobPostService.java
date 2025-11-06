@@ -36,4 +36,9 @@ public class JobPostService {
         jobPostRepo.deleteById(jobPostId);
         return true;
     }
+
+
+    public List<JobPost> searchJobPostByKeyword(String keyword) {
+        return jobPostRepo.findByPostProfileContainingOrPostDescContaining(keyword, keyword);
+    }
 }

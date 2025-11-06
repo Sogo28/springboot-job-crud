@@ -57,13 +57,14 @@ Create a file ``src/main/resources/application.properties`` (or edit it if it ex
 
 ## API Endpoints
 
-| Method | Endpoint       | Description             |
-| ------ | -------------- | ----------------------- |
-| GET    | /jobPosts      | Get all job posts       |
-| GET    | jobPosts/{postId} | Get a specific job post |
-| POST   | /jobPosts      | Create a new job post   |
-| PUT    | jobPosts/{postId} | Update a job post       |
-| DELETE | jobPosts/{postId}| Delete a job post       |
+| Method | Endpoint               | Description             |
+|--------|------------------------| ----------------------- |
+| GET    | /jobPosts              | Get all job posts       |
+| GET    | jobPosts/{postId}      | Get a specific job post |
+| GET    | jobPosts/search        | Search job posts by keyword (query param)     |
+| POST   | /jobPosts              | Create a new job post   |
+| PUT    | jobPosts/{postId}      | Update a job post       |
+| DELETE | jobPosts/{postId}      | Delete a job post       |
 
 ## License 
 This project is for learning purposes and is open-source

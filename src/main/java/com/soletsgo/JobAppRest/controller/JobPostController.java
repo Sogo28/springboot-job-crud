@@ -45,5 +45,10 @@ public class JobPostController {
         return isDeleted ? "Deleted" : "Not Deleted";
     }
 
+    @GetMapping("jobPosts/search")
+    public List<JobPost> searchJobPostByKeyword(@RequestParam String keyword){
+        return jobPostService.searchJobPostByKeyword(keyword);
+    }
+
 
 }

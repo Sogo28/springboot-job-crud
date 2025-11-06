@@ -17,22 +17,23 @@ public class JobPostService {
     }
 
     public List<JobPost> getAllJobPosts(){
-        return jobPostRepo.getAllJobPosts();
+        return jobPostRepo.findAll();
     }
 
     public void addJob(JobPost jobPost){
-        jobPostRepo.addJobPost(jobPost);
+        jobPostRepo.save(jobPost);
     }
 
     public JobPost getJobPostById(int postId) {
-        return jobPostRepo.getJobPostById(postId);
+        return jobPostRepo.findById(postId).orElse(null);
     }
 
     public void updateJob(JobPost jobPost) {
-        jobPostRepo.updatePost(jobPost);
+        jobPostRepo.save(jobPost);
     }
 
     public boolean deleteJobPost(int jobPostId) {
-        return jobPostRepo.deleteJobPost(jobPostId);
+        jobPostRepo.deleteById(jobPostId);
+        return true;
     }
 }

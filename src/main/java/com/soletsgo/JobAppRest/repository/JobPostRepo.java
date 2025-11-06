@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 //@NoArgsConstructor
 public interface JobPostRepo extends JpaRepository<JobPost, Integer> {
-    List<JobPost> findByPostProfileContainingOrPostDescContaining(String postProfile, String postDesc);
+    List<JobPost> findByPostProfileContainingIgnoreCaseOrPostDescContainingIgnoreCase(String postProfile, String postDesc);
 //    private final List<JobPost> jobPosts = new ArrayList<>(
 //            Arrays.asList(
 //                    new JobPost(1, "Java Dev", "Must have a good experience with spring boot", 4, Arrays.asList("Java", "HTML", "CSS")),
